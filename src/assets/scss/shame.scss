@@ -1,13 +1,56 @@
+body{background: whitesmoke !important;}
 .page-content{
   margin: 10em auto;
   max-width: 600px;
 }
-ul li {
-    list-style:none;
-    margin-bottom: 4em;
-    h1{
-      margin-bottom: 0;
-      font-weight: 900;
-      opacity: 0.1;
-    }
-  }
+
+ul#results {
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover, a:active{
+  text-decoration: none;
+}
+
+li.list-item{
+  list-style: none;
+  margin-bottom: 4em;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(198,202,206,.5);
+  border-radius: .25em;
+  margin: 2em 0em;
+  // padding: 1em 2em;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  a{padding: 1em 2em;}
+}
+// li.list-item:nth-child(1) {
+//     background: white;
+//     transform: scale3d(1.5,1.5,1);
+//     margin-bottom: 7em;
+//     box-shadow: 0 2px 3px rgba(198, 202, 206, 0.7);
+// }
+
+h1.position{
+  margin-bottom: 0;
+  font-weight: 900;
+  opacity: 0.1;
+}
+.repo-title{
+  font-weight: bold;
+  display: block;
+}
+.repo-desc{
+  font-style: italic;
+}
+.meta-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar{
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(198,202,206,.75);
+}

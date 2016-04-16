@@ -9,18 +9,37 @@ $( document ).ready(function() {
     success: function(data) {
       var result = data.results;
       var list = $('#results');
-      for (var i = 0; i < result.length; i++) {
+      for (var i = 0; i < result.length; i++)
+      {
         var position = i + 1;
+        var url = result[i].repo_name;
+        var array = url.split('/');
+        var title = array[array.length-1];
+        var image_name = data.results[i].repo_avatars;
+        var image_list = data.results[i].repo_avatars.length;
+        var stars = result[i].repo_meta.replace(/[^0-9]/g, '')
+        var tag = [];
+        var firstWords = result[i].repo_meta.split(" ");
+        tag.push(firstWords[0]);
+        var avatar_wrapper = $(".avatar-wrapper");
           list.append(
-            '<li><h1>' + position +'</h1>' +
-            '<a href="' + result[i].repo_name   + '">' + result[i].repo_name + '</a>' +
-            '<p>' + result[i].repo_description + '</p>' +
-            '<p>' + result[i].repo_meta + '</p>' +
+            '<li class="list-item">' +
+              '<a href="' + result[i].repo_name   + '">' +
+                '<h1 class="position">' + position +'</h1>' +
+                '<p class="repo-title">' + title + '</p>' +
+                '<p class="repo-desc">' + result[i].repo_description + '</p>' +
+                '<span class="meta-wrapper">' +
+                  '<p class="stars">★ ' + stars + '</p>' +
+                  // '<p class="tag">' + tag + '</p>' + // Not specific: will show stars counter again if there's no category present
+                  // '<span class="avatar-wrapper">' + // Not needed by now
+                  //   '<img class="avatar" src="' + result[i].repo_avatars[0] + '"/>' +
+                  // '</span>' +
+                '</span>' +
+              '</a>' +
             '</li>'
           );
+          console.log(image_list);
       }
-      console.log( "yo" );
-
     }
   });
 
