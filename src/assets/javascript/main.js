@@ -10,8 +10,9 @@ $( document ).ready(function() {
       var result = data.results;
       var list = $('#results');
       for (var i = 0; i < result.length; i++) {
+        var position = i + 1;
           list.append(
-            '<li><b>Repo ' + i +'</b>: </br>' +
+            '<li><h1>' + position +'</h1> </br>' +
             '<a href="' + result[i].repo_name   + '">' + result[i].repo_name + '</a>' +
             '<p>' + result[i].repo_description + '</p>' +
             '<p>' + result[i].repo_meta + '</p>' +
