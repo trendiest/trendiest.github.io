@@ -1,5 +1,7 @@
 // A $( document ).ready() block.
-$( document ).ready(function() {
+
+
+
 
   $.ajax({
     type: 'GET',
@@ -42,5 +44,3 @@ $( document ).ready(function() {
       }
     }
   });
-
-});

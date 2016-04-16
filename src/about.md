@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your
-Jekyll theme, as well as basic Jekyll usage documentation at
-[jekyllrb.com](http://jekyllrb.com/)
+By now just displaying the list of trending repositories on github today.
+This side project or playground has the short-term goal of displaying a trimmed down & uncluttered view of what you can find at
+[github.com/trending](http://github.com/trending/)
 
-You can find the source code for the Jekyll new theme at:
-[github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+This project is in (slow but steady) progress at:
+[github.com/trendiest/trendiest.github.io](https://github.com/trendiest/trendiest.github.io)
 
-You can find the source code for Jekyll at
-[github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
+If you like the idea & wanna help out write me at
+[sergimiral@gmail.com](https://sergimiral@gmail.com)
